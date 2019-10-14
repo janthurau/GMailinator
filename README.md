@@ -1,7 +1,7 @@
 # GMailinator
 
 Adds Gmail-esque keyboard shorcuts to Mail.app.  This is still very much a work
-in progress.  Tested with Mail for OS X Sierra.
+in progress.  Tested with Mail for OS X Catalina.
 
 ## Supported Shortcuts
 
@@ -30,17 +30,14 @@ in progress.  Tested with Mail for OS X Sierra.
 
 ## How to install
 
-1. Grab the latest build from the builds/ directory, and unzip to ~/Library/Mail/Bundles
-2. Enable Mail.app plugins:
+1. Clone the repository
+2. Navigate to it in your terminal
+2. Enable Mail.app plugins (stop Mail.app if it's running):
        `defaults write com.apple.mail EnableBundles -bool true`
-
-## How to build
-
-1. Load up the project in Xcode.
-2. Run the build, this should automatically create ~/Library/Mail/Bundles (but you may need to create this).
-3. Enable Mail.app plugins:
-       `defaults write com.apple.mail EnableBundles -bool true`
-4. Relaunch Mail.
+3. run `xcodebuild` (make sure you actually have xcode installed)
+4. run `mv ./build/Release/GMailinator.mailbundle ~/Library/Mail/Bundles`
+5. start mail app, open settings -> plugins -> activate it.
+6. restart mail app :)
 
 ## Credits
 
